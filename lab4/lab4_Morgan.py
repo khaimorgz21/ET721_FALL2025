@@ -80,13 +80,13 @@ for word in word_count_dict:
 print("----- EXERCISE ------")
 users = ["peterpan@yahoo.com","annie@hotmail.com","Carl@hotmail.com","martha@gmail.com","cassie@yahoo.com","Jouse@hotmail.com","John@hotmail.com"]
 
-word_count_dict = {}
-for word in list_phrase:
-    if word in word_count_dict:
-        word_count_dict[word] += 1
-    else:
-        word_count_dict[word] = 1
+users_count_dict = {}
+for user in users:
+    if user in users_count_dict:
+        users_count_dict[user] += 1
+    else: 
+        users_count_dict[user] = 1
 
-# print result
-for word in word_count_dict:
-    print(f"'{word}' appearance(s): {word_count_dict[word]} times")
+# print results
+for user in users_count_dict:
+    print(f"'{user}' instances {users_count_dict[user]}")
