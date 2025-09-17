@@ -57,3 +57,29 @@ print(f"The area of the rectangle1 with width {rectangle1.width} and height {rec
 print(f"The perimeter of rectangle2 = {rectangle2.perimeter()}")
 
 print("\n------ EXERCISE -------")
+class BankAccount(object):
+    def __init__(self, number, holder, balance):
+        self.number = number
+        self.holder = holder
+        self.balance = balance
+
+    # method to withdraw
+    def withdraw(self, w):
+        self.balance -= w
+        return self.balance
+        
+    # method to deposit
+    def deposit(self, d):
+        self.number += d
+        return self.balance
+
+
+
+
+useraccount = BankAccount(123456789, "Makhai", 0)
+useraccount.withdraw(700)
+useraccount.deposit(1000)
+useraccount.withdraw(500)
+
+print(f"Final Balance: {useraccount.balance}")
+
