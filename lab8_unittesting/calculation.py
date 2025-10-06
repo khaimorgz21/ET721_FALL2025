@@ -10,8 +10,10 @@ def multplythreenumbers(n1=1 , n2=1, n3=1):
 def dividetwonumbers(n1,n2):
     try:
         return n1/n2
-    expect ZeroDivisionError:
+    except ZeroDivisionError:
         print("ERROR! can't divide by zero")
-    expect ValueError:
-        print("ERROR! not a")
-    
+        return -1
+    except ValueError:
+        print("ERROR! not a numerical value")
+    except:
+        print("ERROR! Can't divide the numbers") 

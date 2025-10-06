@@ -2,9 +2,12 @@
 Makhai Morgan
 Lab 8, unittest
 Sep 29, 2025
+Oct 6, 2025
 """
 import unittest
-import calculations
+import calculation
+from employee import Employee # import class 'Employee' from 'employee'py'
+
 # function to add and return the sum of two numbers
 def addtwonumbers(a,b):
     return a+b
@@ -18,19 +21,57 @@ class TestAddFunction(unittest.TestCase):
 print("\n---- Example 2: unittest for calculations ----- ")
 class TestCalculation(unittest.TestCase):
     def test_multiplications(self):
-        self.assertEqual(calculations.multiplythreenumbers(5),5)
-        self.assertEqual(calculations.multiplythreenumbers(2,3),6)
-        self.assertEqual(calculations.multiplythreenumbers(0),0)
+        self.assertEqual(calculation.multplythreenumbers(5),5)
+        self.assertEqual(calculation.multplythreenumbers(2,3),6)
+        self.assertEqual(calculation.multplythreenumbers(0),0)
 
 
     def test_division(self):
-        self.assertEqual(calculations.dividitwonumbers(8,4),2)
-        self.assertAlmostEqual(calculations.dividitwonumbers(9,2),4)
-        self.assertEqual(calculations.dividitwonumbers(9,0),-1)
-        self.assertIsNone(calculations.dividitwonumbers("a",2))
+        self.assertEqual(calculation.dividetwonumbers(8,4),2)
+        self.assertAlmostEqual(calculation.dividetwonumbers(9,2),4.5)
+        self.assertEqual(calculation.dividetwonumbers(0,9),0)
+        self.assertIsNone(calculation.dividetwonumbers("a",2))
 
     def test_addition(self):
-        self.assertEqual(calculations.addtwonumbers(7,6),2)
-        self.assertEqual(calculations.)
+        self.assertEqual(calculation.addthreenumbers(7,6),13)
+        self.assertEqual(calculation.addthreenumbers(5,4),9)
+        self.assertEqual(calculation.addthreenumbers(8,4),12)
+
+print("\n---- Example 3: unittest for Employee ----- ")
+class TestEmplyoee(unittest.TestCase):
+    # create a test templte
+    def setUp(self):
+        # create an instant of a new employee
+        self.emp1 = Employee('Peter', 'Pan', 50000)
+
+    # create a test for employee email
+    def test_emailemployee(self):
+        self.assertEqual(self.emp1.emailemployee, 'Peter.Pan@email.com')
+
+    # create a test for emplyoee full
+    def test_fullname(self):
+        self.assertEqual(self.emp1.fullname, 'Peter Pan' )
+
+        # update the first name
+        self.emp1.first = "Will"
+
+        #re-test full name
+        self.assertEqual(self.emp1.fullname, 'Will Pan')
+
+    # create a test for salary
+    def test_salary(self):
+        # test salary before the raise
+        self.assertEqual(self.emp1.salary, 50000)
+
+        # first, raise the salry first
+        self.emp1.apply_raise()
+        
+        # second, test salary
+        self.assertEqual(self.emp1.salary, 52500)
+    
+print("\n---- LAB EXERCISE: Bank Account ----- ")
+class TestBankAccount(unittest.TestCase):
+
+    
 if __name__ =="__main__":
     unittest.main()
