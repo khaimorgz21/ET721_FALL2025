@@ -68,10 +68,41 @@ class TestEmplyoee(unittest.TestCase):
         
         # second, test salary
         self.assertEqual(self.emp1.salary, 52500)
+
     
 print("\n---- LAB EXERCISE: Bank Account ----- ")
 class TestBankAccount(unittest.TestCase):
 
+    def setUp(self):
+        # Creating default Bank Account instance
+        self.account1 = TestBankAccount("Jordan Keuring", 3489, 50)
     
+    def test_initial_balance(self):
+        # Bank account balance initialization
+        self.assertEqual(self.account1.get_balance(), 50)
+
+    def test_deposit(self):
+        # Test that deposit adds to the balance
+        self.account1.deposit(125)
+        self.assertEqual(self.account1.get_balance(), 175) # 50 +1 25 = 175
+
+    def test_withdraw(self):
+        # Test that withdraw subtracts from balance
+        self.account1.withdraw(30)
+        self.assertEqual(self.account1.get_balance(), 20) # 50 - 30 = 20
+
+    def test_withdraw_more_than_balance(self):
+        # Test that withdrawing more than the balance amount raises ValueError
+        with self.assertRaises(ValueError):
+            self.account1.withdraw(70)
+
+    def test_sequence_of_transactions(self):
+        # Testing a series of deposit and withdrawals
+        self.account1.deposit(100) # Balance: 150
+        self.account1.withdraw(50) # Balance: 100
+        self.account1.deposit(25)  # Balance: 125
+        self.account1.withdraw(75) # Balance: 50
+
+
 if __name__ =="__main__":
     unittest.main()
