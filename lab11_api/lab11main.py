@@ -14,6 +14,7 @@ dict_ = {'a':[11,21,31],  'b':[12,22,32]}
 df = pd.DataFrame(dict_)
 
 # display the first few rows of the dataframe
+<<<<<<< HEAD
 print(df.head())
 
 # mean method  calculates and returns the mean of the data
@@ -104,3 +105,6 @@ plt.tight_layout()
 plt.show()
 
 input("Press Enter to close...")
+=======
+print(df.head())
+>>>>>>> afe7c2302a479748d8b56aa6f3e366bee391e3ba
