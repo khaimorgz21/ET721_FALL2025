@@ -1,4 +1,8 @@
 *{box-sizing: border-box;}
+img{
+    width: 100%;
+    display: block;
+}
 .title{
     text-align: center;
     color: blueviolet;
@@ -12,4 +16,23 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 1px 1px 5px gray;
+}
+
+.maincontainer{
+    width: 800px;
+    margin: 2rem auto;
+    background-color: aliceblue;
+    padding: 1rem;
+    border: solid 1px lightblue;
+}
+
+/* CARD */
+.card{
+    width: 200px;
+    height: 300px;
+    border: solid 1px gray;
+    overflow: hidden;
+}
+.card:hover{
+    border: dotted2px blueviolet;
 }
