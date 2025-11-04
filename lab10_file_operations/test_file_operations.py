@@ -58,18 +58,5 @@ class TestFileOperations(unittest.TestCase):
 
         self.assertEqual(final_data, initial_content + append_content)
 
-    # EXERCISE
-def email_read(filename, email):
-    count_email = 0
-    with open(filename, "r") as file1:
-        filelines = file1.readlines()
-        # loop through each item in 'filenames'
-        for eachline in filelines:
-            print(eachline.strip())
-            if email in filename:
-                email = "@yahoo"
-                count_email += 1
-                return count_email
-        print(count_email)
 
     unittest.main()

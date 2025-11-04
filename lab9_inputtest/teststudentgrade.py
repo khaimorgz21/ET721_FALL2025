@@ -38,7 +38,6 @@ class TestMainFunction(unittest.TestCase):
         self.assertIn("The class average is 87.50", output)
 
     # EXERCISE: create a unittest for invalid data type, for example when the user input string
-    @patch()
 # run the unit test automatically
 if __name__ == "__main__":
     unittest.main()
