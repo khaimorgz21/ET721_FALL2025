@@ -14,13 +14,13 @@ img{width: 100%; display: block;}
 }
 .todo_text{
     background-color: white; padding: 0.5rem;
-    width: 60%;
 }
 .btndeleteeach, .btndeleteall{
     width: 40%;
     margin: 2%;
     padding: 0.5rem;
     border: none;
+    background-color: aliceblue;
 }
 .btndeleteeach{
     background-color: orange;
@@ -28,7 +28,7 @@ img{width: 100%; display: block;}
 .btndeleteall{
     background-color: rgb(248, 138, 3);
 }
-.btndeleteeach:hover, .btndeleteall:hover, .btnaddlist:hover{
+.btndeleteeach:hover, .btndeleteall:hover, .btnaddlist{
     background-color: darkred;
     color:white;
 }
