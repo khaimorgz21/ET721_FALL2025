@@ -21,7 +21,7 @@ from lab5_Morgan_function import *
 print("\n----- Example 1: intro function -----")
 n1 = 2
 n2 = 5
-p = product(n1,n2)
+p = product(n1, n2)
 print(f"The product of {n1} and {n2} is {p}")
 p = product()
 print(f"The product is {p}")
@@ -34,7 +34,9 @@ s2 = 3
 hyp = hypotenuse(s1, s2)
 print(f"The hypotenuse is {hyp:0.2f}")
 
-print("\n----- Example 3: function to check if the number is positive, negative, or zero.  -----")
+print(
+    "\n----- Example 3: function to check if the number is positive, negative, or zero.  -----"
+)
 c = check_number(-3)
 print(f"The number is {c}")
 c = check_number(5)
@@ -42,7 +44,9 @@ print(f"The number is {c}")
 c = check_number(0)
 print(f"The number is {c}")
 
-print("\n----- Example 4: function to calculate the average of a list of grades, and return 'true' if the avaerage is greater than 60, otherwise, it returns 'false'  -----")
+print(
+    "\n----- Example 4: function to calculate the average of a list of grades, and return 'true' if the avaerage is greater than 60, otherwise, it returns 'false'  -----"
+)
 grades = [50, 60, 85, 93, 72, 98]
 avg = check_grades(grades)
 print(f"Did I pass the class? {avg}")

@@ -3,16 +3,18 @@ Makhai Morhgan
 Oct 17, 2025
 Lab 10, file operation test
 """
+
 import unittest
 import os
 from file_operations import read_file, write_file, append_file
+
 
 class TestFileOperations(unittest.TestCase):
     def setUp(self):
         # set up temporary test file name before each test
         self.filename = "test_file.txt"
         self.msg = "Makhai Morgan"
-    
+
     def tearDown(self):
         # remove the test file after each test
         if os.path.exists(self.filename):
@@ -29,7 +31,7 @@ class TestFileOperations(unittest.TestCase):
         with open(self.filename, "r") as f:
             result = f.read()
 
-        self.assertEqual(result,msg)
+        self.assertEqual(result, msg)
 
     def test_read_file(self):
         # test reading text from a file
@@ -57,6 +59,5 @@ class TestFileOperations(unittest.TestCase):
             final_data = f.read()
 
         self.assertEqual(final_data, initial_content + append_content)
-
 
     unittest.main()

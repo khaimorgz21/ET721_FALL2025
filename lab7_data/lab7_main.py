@@ -3,6 +3,7 @@ Makhai Morgan
 Lab 7, accesing data in a file
 Oct 14, 2025
 """
+
 from lab7_function import *
 
 testing()
@@ -28,6 +29,6 @@ print("\n ---- example 7: append data into an existing file -----")
 stamp_date("Morgan.txt")
 
 print("\n ---- EXERCISE -----")
-count_yahoo = email_read("user_email.txt","@yahoo")
-count_email = email_read("user_email.txt","@gmail")
-count_hotmail = email_read("user_email.txt","@hotmail")
+count_yahoo = email_read("user_email.txt", "@yahoo")
+count_email = email_read("user_email.txt", "@gmail")
+count_hotmail = email_read("user_email.txt", "@hotmail")
