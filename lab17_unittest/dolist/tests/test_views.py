@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 from .models import Todolist
 from .forms import Todolistform
-from .views import addTooitem, completedTodo, deletecompleted, deleteAll
+from .views import addTodoitem, completedTodo, deletecompleted, deleteAll
 
 class TodoviewsTestCase(TestCase):
     def setUp(self):
@@ -15,4 +15,4 @@ class TodoviewsTestCase(TestCase):
         # test the index view render the correct context and template
         response = self.client.get(reverse('index'))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'index.html') 
+        self.assertTemplateUsed(response, 'index.html')
